@@ -95,10 +95,6 @@ dependencies {
     // sdp
     implementation "com.intuit.sdp:sdp-android:$sdp_version"
 
-    // Social Login
-    implementation "com.facebook.android:facebook-android-sdk:8.2.0"
-    implementation "com.google.android.gms:play-services-auth:19.2.0"
-
     // For managing request permission
     implementation "com.karumi:dexter:4.2.0"
 
