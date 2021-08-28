@@ -50,6 +50,7 @@
                 android:textColorHint="@color/text_hint_color"
                 app:boxBackgroundMode="none"
                 app:hintEnabled="false"
+                app:endIconTint="@color/black"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText

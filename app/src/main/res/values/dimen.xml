@@ -10,6 +10,9 @@
     <dimen name="btn_container_height">@dimen/_50sdp</dimen>
     <dimen name="et_container_height">@dimen/_45sdp</dimen>
 
+
+    <dimen name="corner_radius">@dimen/_12sdp</dimen>
+
     <dimen name="h0_text_size">@dimen/_24sdp</dimen>
     <dimen name="h1_text_size">@dimen/_20sdp</dimen>
     <dimen name="h2_text_size">@dimen/_18sdp</dimen>
