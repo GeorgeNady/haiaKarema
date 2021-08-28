@@ -22,7 +22,7 @@ abstract class BaseActivity<B : ViewBinding,VM : ViewModel>(
     val token get() = prefs.prefsToken
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(R.style.AppTheme)
+        setTheme(R.style.HaiaKarema)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         initialization() // get FCM ID
