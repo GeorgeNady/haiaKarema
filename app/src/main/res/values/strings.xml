@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HaiaKarema</string>
+    <string name="map">Map</string>
+    <string name="files">Files</string>
+    <string name="signin">Signin</string>
+    <string name="user_name">User name</string>
+    <string name="password">Password</string>
+    <string name="fillAllRequiredFields">Fill all required fields</string>
+    <string name="error_password">Password must be contain at least 8 characters</string>
+
+</resources>

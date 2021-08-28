@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="hzPaddingToScreen">@dimen/_15sdp</dimen>
+    <dimen name="hzMarginToScreen">@dimen/_15sdp</dimen> // from 20sdp = 15sdp = 12sdp
+
+    <dimen name="vertical_padding_to_views">@dimen/_7sdp</dimen>
+    <dimen name="small_padding_to_views">@dimen/_5sdp</dimen>
+    <dimen name="smaller_padding_to_views">@dimen/_3sdp</dimen>
+
+    <dimen name="btn_container_height">@dimen/_50sdp</dimen>
+    <dimen name="et_container_height">@dimen/_45sdp</dimen>
+
+    <dimen name="h0_text_size">@dimen/_24sdp</dimen>
+    <dimen name="h1_text_size">@dimen/_20sdp</dimen>
+    <dimen name="h2_text_size">@dimen/_18sdp</dimen>
+    <dimen name="h3_text_size">@dimen/_14sdp</dimen>
+    <dimen name="h5_text_size">@dimen/_13sdp</dimen>
+
+    <dimen name="h4_text_size">@dimen/_16sdp</dimen>
+
+    <dimen name="p1_text_size">@dimen/_12sdp</dimen>
+    <dimen name="p2_text_size">@dimen/_10sdp</dimen>
+    <dimen name="p3_text_size">@dimen/_8sdp</dimen>
+
+</resources>
