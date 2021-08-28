@@ -6,6 +6,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="orange">#FFFF4D1F</color>
+    <color name="green">#FF068783</color>
+
     <color name="gry">#707070</color>
     <color name="text_hint_color">#B9B9B9</color>
     <color name="background_color">#E3E3E3</color>
