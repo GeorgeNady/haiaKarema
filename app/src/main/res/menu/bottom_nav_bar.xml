@@ -3,12 +3,12 @@
 
     <item
         android:id="@+id/mapFragment"
-        android:enabled="true"
+        android:icon="@drawable/ic_map"
         android:title="@string/map" />
 
     <item
         android:id="@+id/filesFragment"
-        android:enabled="true"
+        android:icon="@drawable/ic_files"
         android:title="@string/files" />
 
 </menu>
