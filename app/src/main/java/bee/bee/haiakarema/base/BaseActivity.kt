@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
-import bee.bee.hoshaapp.R
-import bee.bee.hoshaapp.utiles.Preferences.Companion.prefs
+import bee.bee.haiakarema.R
+import bee.bee.haiakarema.utiles.Preferences.Companion.prefs
 import java.lang.reflect.ParameterizedType
 
 
@@ -22,7 +22,7 @@ abstract class BaseActivity<B : ViewBinding,VM : ViewModel>(
     val token get() = prefs.prefsToken
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(R.style.Theme_Hosha)
+        setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         initialization() // get FCM ID

@@ -1,8 +1,7 @@
 package bee.bee.haiakarema.ui.auth
 
 import bee.bee.haiakarema.base.BaseActivity
-import bee.bee.hoshaapp.base.BaseActivity
-import bee.bee.hoshaapp.databinding.ActivityAuthBinding
+import bee.bee.haiakarema.databinding.ActivityAuthBinding
 import bee.bee.hoshaapp.viewmodel.AuthActivityViewModel
 
 

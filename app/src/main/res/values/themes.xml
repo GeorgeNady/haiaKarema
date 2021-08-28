@@ -12,6 +12,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="editTextStyle">@style/MyEditText</item>
+        <item name="materialButtonStyle">@style/MyMaterialButtons</item>
     </style>
 
     <!-- ************************************************* MaterialButton  -->
@@ -20,7 +22,34 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:textAlignment">viewStart</item>
         <item name="cornerRadius">@dimen/_5sdp</item>
+        <item name="android:backgroundTint"></item>
         <item name="android:textSize">@dimen/p2_text_size</item>
     </style>
+
+    <!-- ****************************************************** EditText  -->
+    <style name="MyEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingHorizontal">@dimen/vertical_padding_to_views</item>
+    </style>
+
+    <!-- ///////////////////////////////////////////////// Material Button  -->
+    <style name="MyMaterialButtons" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">@dimen/_5sdp</item>
+    </style>
+
+    <!-- ****************************************************** Splash screen -->
+    <style name="splash_screen_theme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="splash_screen_theme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="splash_screen_theme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="splash_screen_theme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

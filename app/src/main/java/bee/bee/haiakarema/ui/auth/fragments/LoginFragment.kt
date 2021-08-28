@@ -1,9 +1,7 @@
 package bee.bee.haiakarema.ui.auth.fragments
 
 import android.annotation.SuppressLint
-import android.util.Log
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import bee.bee.haiakarema.R
 import bee.bee.haiakarema.base.ActivityFragmentAnnoation
 import bee.bee.haiakarema.base.BaseFragment

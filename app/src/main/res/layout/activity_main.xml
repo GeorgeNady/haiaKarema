@@ -24,9 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:splitMotionEvents="true"
-        app:itemIconSize="@dimen/_24sdp"
         app:elevation="@dimen/_10sdp"
-        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_nav_bar" />
 
 </LinearLayout>

@@ -3,9 +3,8 @@ package bee.bee.haiakarema.utiles
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
-import bee.bee.hoshaapp.base.BaseApplication
+import bee.bee.haiakarema.base.BaseApplication
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 
 class Preferences(context: Context) {
 
