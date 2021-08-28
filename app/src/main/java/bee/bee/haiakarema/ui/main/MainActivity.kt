@@ -34,12 +34,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
 
     override fun setListener() {
 
-        // If you want to send messages to this application instance or
-        // manage this apps subscriptions on the server side, send the
-        // FCM registration token to your app server.
-
         binding.apply {
-            // setupNavigation(bottomNavigation, fragmentContainerView)
             val navHostFragment =
                 supportFragmentManager.findFragmentById(R.id.mainNavHostFragment) as NavHostFragment
             val navController = navHostFragment.navController

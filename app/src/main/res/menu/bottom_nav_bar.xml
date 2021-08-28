@@ -7,7 +7,7 @@
         android:title="@string/map" />
 
     <item
-        android:id="@+id/fileFragment"
+        android:id="@+id/filesFragment"
         android:enabled="true"
         android:title="@string/files" />
 
