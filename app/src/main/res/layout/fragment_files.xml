@@ -20,7 +20,7 @@
             android:id="@+id/recFiles"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/files_item"
+            tools:listitem="@layout/item_file"
             android:layout_below="@+id/image">
 
         </androidx.recyclerview.widget.RecyclerView>

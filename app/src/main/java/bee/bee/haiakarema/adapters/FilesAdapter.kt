@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import bee.bee.haiakarema.databinding.ItemFileBinding
+import bee.bee.haiakarema.model.DocumentFiles
 
 class FilesAdapter:RecyclerView.Adapter<FilesAdapter.FileViewHolder>() {
 
@@ -15,11 +16,11 @@ class FilesAdapter:RecyclerView.Adapter<FilesAdapter.FileViewHolder>() {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     private val TAG = this.javaClass.name
 
-    private val differCallBack = object : DiffUtil.ItemCallback<String>() {
-        override fun areItemsTheSame(oldItem: String, newItem: String) =
-            oldItem.length == newItem.length
+    private val differCallBack = object : DiffUtil.ItemCallback<DocumentFiles>() {
+        override fun areItemsTheSame(oldItem: DocumentFiles, newItem: DocumentFiles) =
+            oldItem.id == newItem.id
 
-        override fun areContentsTheSame(oldItem: String, newItem: String) =
+        override fun areContentsTheSame(oldItem: DocumentFiles, newItem: DocumentFiles) =
             oldItem == newItem
     }
     val differ = AsyncListDiffer(this, differCallBack)
@@ -48,9 +49,14 @@ class FilesAdapter:RecyclerView.Adapter<FilesAdapter.FileViewHolder>() {
 
         holder.binding.apply {
 
+            btnProject.text = current.name
 
+            // go to data of one project activity
+            btnProject.setOnClickListener {
 
+            }
         }
+
 
     }
 
