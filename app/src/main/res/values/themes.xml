@@ -16,9 +16,10 @@
     <!-- ************************************************* MaterialButton  -->
     <style name="RegisterButtonStyle" parent="Widget.MaterialComponents.Button">
         <item name="iconPadding">@dimen/hzPaddingToScreen</item>
+        <item name="android:layout_height">@dimen/btn_container_height</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:textAlignment">viewStart</item>
-        <item name="cornerRadius">@dimen/_5sdp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="cornerRadius">@dimen/_12sdp</item>
         <item name="android:backgroundTint">@color/purple_500</item>
         <item name="android:textSize">@dimen/p2_text_size</item>
     </style>
@@ -35,9 +36,10 @@
     </style>
 
     <!-- ****************************************************** Splash screen -->
-    <style name="splash_screen_theme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="splash_screen_theme" parent="Theme.MaterialComponents.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_screen</item>
         <item name="android:statusBarColor">@color/white</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/black</item>
     </style>
 
     <style name="splash_screen_theme.NoActionBar">
