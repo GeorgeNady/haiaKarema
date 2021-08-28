@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/vertical_padding_to_views"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/videos"
+        android:padding="@dimen/vertical_padding_to_views"
+        android:background="@color/orange"
+        android:textColor="@color/white"
+        android:textSize="@dimen/h2_text_size" />
+
+    <tcking.github.com.giraffeplayer2.VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp" />
+
+</LinearLayout>
