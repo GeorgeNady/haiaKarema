@@ -8,7 +8,7 @@
     <dimen name="small_padding_to_views">@dimen/_7sdp</dimen>
 
     <dimen name="btn_container_height">@dimen/_50sdp</dimen>
-    <dimen name="et_container_height">@dimen/_45sdp</dimen>
+    <dimen name="et_container_height">@dimen/_50sdp</dimen>
 
 
     <dimen name="corner_radius">@dimen/_12sdp</dimen>
