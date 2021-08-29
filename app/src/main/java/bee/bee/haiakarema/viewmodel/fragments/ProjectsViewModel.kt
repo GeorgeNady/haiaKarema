@@ -12,6 +12,7 @@ import androidx.lifecycle.MutableLiveData
 import bee.bee.haiakarema.model.GetProjects
 import bee.bee.haiakarema.model.ItemProject
 import bee.bee.haiakarema.network.ApiClient
+import bee.bee.haiakarema.network.ApiClient.Companion.api
 import bee.bee.haiakarema.utiles.Preferences.Companion.prefs
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.annotations.NonNull
@@ -25,6 +26,7 @@ class ProjectsViewModel(val app: Application) : AndroidViewModel(app) {
 
     private val TAG = "ProjectsViewModel"
     private lateinit var projectsResponse: MutableLiveData<List<ItemProject>>
+    private lateinit var projectResponse: MutableLiveData<ItemProject>
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////// hitting apis
@@ -36,11 +38,16 @@ class ProjectsViewModel(val app: Application) : AndroidViewModel(app) {
         return projectsResponse
     }
 
+    fun getProject(id: String, progressBar: ProgressBar): LiveData<ItemProject> {
+        projectResponse = MutableLiveData()
+        prepareGetProject(id, progressBar)
+        return projectResponse
+    }
+
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////// preparing for hitting apis
     ////////////////////////////////////////////////////////////////////////////////////////////////
-
     private fun prepareGetProjects(progressBar: ProgressBar) {
         progressBar.visibility = View.VISIBLE
         val observable: Observable<List<ItemProject>> =
@@ -52,16 +59,43 @@ class ProjectsViewModel(val app: Application) : AndroidViewModel(app) {
                 override fun onSubscribe(d: @NonNull Disposable?) {
 
                 }
+
                 override fun onNext(project: List<ItemProject>?) {
                     Log.d(TAG, "onNext: $project")
                     projectsResponse.postValue(project)
-                    progressBar.visibility=View.GONE
+                    progressBar.visibility = View.GONE
 
                 }
 
                 override fun onError(e: @NonNull Throwable?) {
                     Log.d(TAG, "onError: " + e!!.message)
-                    progressBar.visibility=View.GONE
+                    progressBar.visibility = View.GONE
+                }
+
+                override fun onComplete() {}
+            }
+        observable.subscribe(observer)
+    }
+
+    private fun prepareGetProject(id: String, progressBar: ProgressBar) {
+        progressBar.visibility = View.VISIBLE
+        val observable =  api.getproject(id, prefs.prefsToken)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+
+        val observer = object : Observer<ItemProject> {
+                override fun onSubscribe(d: Disposable?) {}
+
+                override fun onNext(project: ItemProject?) {
+                    Log.d(TAG, "onNext: $project")
+                    projectResponse.postValue(project)
+                    progressBar.visibility = View.GONE
+
+                }
+
+                override fun onError(e: Throwable?) {
+                    Log.d(TAG, "onError: " + e!!.message)
+                    progressBar.visibility = View.GONE
                 }
 
                 override fun onComplete() {}

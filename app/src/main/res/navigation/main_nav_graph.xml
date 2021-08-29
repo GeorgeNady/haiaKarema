@@ -19,6 +19,10 @@
     <fragment
         android:id="@+id/projectFragment"
         android:name="bee.bee.haiakarema.ui.main.fragments.ProjectFragment"
-        android:label="ProjectFragment" />
+        android:label="ProjectFragment" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
 
 </navigation>
