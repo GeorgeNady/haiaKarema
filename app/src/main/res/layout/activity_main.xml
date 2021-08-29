@@ -21,6 +21,7 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
+        app:backgroundTint="@color/black"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:splitMotionEvents="true"

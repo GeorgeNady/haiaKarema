@@ -1,6 +1,5 @@
-package bee.bee.hoshaapp.network
+package bee.bee.haiakarema.network
 
-import bee.bee.haiakarema.network.ApiInterface
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -14,7 +13,7 @@ class ApiClient {
 
     companion object {
 
-        private const val BASE_URL = "https://hosha.beeinteractivemedia.com/api/"
+        private const val BASE_URL = "https://abdaa.beeinteractivemedia.com/api/"
 
         private val retrofit by lazy {
 
