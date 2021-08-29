@@ -7,154 +7,160 @@
 
     </data>
 
-    <ScrollView
+    <LinearLayout
         android:background="@color/black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"
+        android:orientation="vertical"
         tools:context=".ui.main.fragments.ProjectFragment">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:background="@color/green"
+            android:paddingHorizontal="@dimen/hzMarginToScreen"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center|top"
-                android:orientation="vertical">
+            <include layout="@layout/back_button"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/btnBack"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:background="@color/green"
-                    android:paddingHorizontal="@dimen/hzMarginToScreen"
-                    android:layout_height="?attr/actionBarSize"
-                    android:orientation="horizontal">
-
-                    <include layout="@layout/back_button"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerHorizontal="true"
-                        android:id="@+id/btnBack"
-                        android:layout_height="match_parent"
-                        android:layout_width="wrap_content" />
-
-                    <TextView
-                        android:id="@+id/tvTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="Project Name"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/h2_text_size"
-                        android:layout_centerInParent="true" />
-
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_marginTop="@dimen/hzMarginToScreen"
-                    android:layout_width="match_parent"
-                    android:layout_marginHorizontal="@dimen/hzMarginToScreen"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/intro"
-                        android:textColor="@color/orange"
-                        android:layout_marginBottom="@dimen/vertical_padding_to_views"
-                        android:textSize="@dimen/h2_text_size" />
-
-                    <TextView
-                        android:id="@+id/tvIntro"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/p1_text_size"
-                        tools:text="Government marketing government marketing government marketing government marketing government marketing" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dip"
-                    android:layout_marginVertical="@dimen/vertical_padding_to_views"
-                    android:background="@color/gry" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginHorizontal="@dimen/hzMarginToScreen"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/videos"
-                        android:textColor="@color/orange"
-                        android:layout_marginBottom="@dimen/vertical_padding_to_views"
-                        android:textSize="@dimen/h2_text_size" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:clipToPadding="false"
-                        android:id="@+id/rvVideos"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        tools:itemCount="2"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        tools:listitem="@layout/item_video" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dip"
-                    android:layout_marginVertical="@dimen/vertical_padding_to_views"
-                    android:background="@color/gry" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginHorizontal="@dimen/hzMarginToScreen"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/pdfs"
-                        android:textColor="@color/orange"
-                        android:layout_marginBottom="@dimen/vertical_padding_to_views"
-                        android:textSize="@dimen/h2_text_size" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:paddingTop="@dimen/vertical_padding_to_views"
-                        android:clipToPadding="false"
-                        android:id="@+id/rvPdfs"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        tools:listitem="@layout/item_pdf" />
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <ProgressBar
-                android:id="@+id/progressBar"
+            <TextView
+                android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
-                android:layout_marginTop="?attr/actionBarSize"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true" />
+                tools:text="Project Name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h2_text_size"
+                android:layout_centerInParent="true" />
 
         </RelativeLayout>
 
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
 
 
-    </ScrollView>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/hzMarginToScreen"
+                        android:layout_width="match_parent"
+                        android:layout_marginHorizontal="@dimen/hzMarginToScreen"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/intro"
+                            android:textColor="@color/orange"
+                            android:layout_marginBottom="@dimen/vertical_padding_to_views"
+                            android:textSize="@dimen/h2_text_size" />
+
+                        <TextView
+                            android:id="@+id/tvIntro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/p1_text_size"
+                            tools:text="Government marketing government marketing government marketing government marketing government marketing" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginVertical="@dimen/vertical_padding_to_views"
+                        android:background="@color/gry" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginHorizontal="@dimen/hzMarginToScreen"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/videos"
+                            android:textColor="@color/orange"
+                            android:layout_marginBottom="@dimen/vertical_padding_to_views"
+                            android:textSize="@dimen/h2_text_size" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:clipToPadding="false"
+                            android:id="@+id/rvVideos"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:itemCount="2"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/item_video" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginVertical="@dimen/vertical_padding_to_views"
+                        android:background="@color/gry" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginHorizontal="@dimen/hzMarginToScreen"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pdfs"
+                            android:textColor="@color/orange"
+                            android:layout_marginBottom="@dimen/vertical_padding_to_views"
+                            android:textSize="@dimen/h2_text_size" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:paddingTop="@dimen/vertical_padding_to_views"
+                            android:clipToPadding="false"
+                            android:id="@+id/rvPdfs"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/item_pdf" />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/vertical_padding_to_views"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true" />
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
 </layout>
