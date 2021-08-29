@@ -81,7 +81,6 @@
                     android:background="@color/gry" />
 
                 <LinearLayout
-                    android:layout_marginTop="@dimen/hzMarginToScreen"
                     android:layout_width="match_parent"
                     android:layout_marginHorizontal="@dimen/hzMarginToScreen"
                     android:layout_height="wrap_content"
@@ -113,7 +112,6 @@
                     android:background="@color/gry" />
 
                 <LinearLayout
-                    android:layout_marginTop="@dimen/hzMarginToScreen"
                     android:layout_width="match_parent"
                     android:layout_marginHorizontal="@dimen/hzMarginToScreen"
                     android:layout_height="wrap_content"
