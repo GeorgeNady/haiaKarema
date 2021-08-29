@@ -12,6 +12,7 @@ import bee.bee.haiakarema.base.ActivityFragmentAnnoation
 import bee.bee.haiakarema.base.BaseFragment
 import bee.bee.haiakarema.databinding.FragmentProjectBinding
 import bee.bee.haiakarema.viewmodel.fragments.ProjectsViewModel
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer
 
 @SuppressLint("NonConstantResourceId")
 @ActivityFragmentAnnoation(R.layout.fragment_project)
@@ -47,7 +48,7 @@ class ProjectFragment : BaseFragment<FragmentProjectBinding>() {
 
     override fun onPause() {
         super.onPause()
-
+        JCVideoPlayer.releaseAllVideos()
     }
 
     private fun FragmentProjectBinding.getProjectResponse() {
