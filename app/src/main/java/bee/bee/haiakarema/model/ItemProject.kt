@@ -8,5 +8,5 @@ data class ItemProject(
     val name:String,
     val intro:String,
     val pdf:List<String>,
-    val videos:List<String>,
+    val video:List<String>,
 ):Serializable

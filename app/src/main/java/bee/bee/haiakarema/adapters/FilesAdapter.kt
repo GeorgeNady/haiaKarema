@@ -1,14 +1,20 @@
 package bee.bee.haiakarema.adapters
 
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import bee.bee.haiakarema.R
 import bee.bee.haiakarema.databinding.ItemFileBinding
 import bee.bee.haiakarema.model.DocumentFiles
+import bee.bee.haiakarema.model.ItemProject
+import bee.bee.haiakarema.ui.main.fragments.FilesFragment
 
-class FilesAdapter:RecyclerView.Adapter<FilesAdapter.FileViewHolder>() {
+class FilesAdapter(val context: FilesFragment):RecyclerView.Adapter<FilesAdapter.FileViewHolder>() {
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -16,11 +22,11 @@ class FilesAdapter:RecyclerView.Adapter<FilesAdapter.FileViewHolder>() {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     private val TAG = this.javaClass.name
 
-    private val differCallBack = object : DiffUtil.ItemCallback<DocumentFiles>() {
-        override fun areItemsTheSame(oldItem: DocumentFiles, newItem: DocumentFiles) =
+    private val differCallBack = object : DiffUtil.ItemCallback<ItemProject>() {
+        override fun areItemsTheSame(oldItem: ItemProject, newItem: ItemProject) =
             oldItem.id == newItem.id
 
-        override fun areContentsTheSame(oldItem: DocumentFiles, newItem: DocumentFiles) =
+        override fun areContentsTheSame(oldItem: ItemProject, newItem: ItemProject) =
             oldItem == newItem
     }
     val differ = AsyncListDiffer(this, differCallBack)
@@ -53,7 +59,10 @@ class FilesAdapter:RecyclerView.Adapter<FilesAdapter.FileViewHolder>() {
 
             // go to data of one project activity
             btnProject.setOnClickListener {
-
+                val bundle=Bundle()
+                bundle.putString("id",current.id)
+                context.findNavController()
+                    .navigate(R.id.projectFragment, bundle, context.navOptions)
             }
         }
 

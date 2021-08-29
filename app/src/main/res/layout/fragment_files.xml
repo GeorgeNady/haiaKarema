@@ -7,19 +7,24 @@
 
     </data>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none">
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
             tools:context=".ui.main.fragments.FilesFragment">
 
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerInParent="true">
+
+            </ProgressBar>
             <ImageView
-                android:layout_marginTop="@dimen/hzMarginToScreen"
+                android:id="@+id/image"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_container_height"
                 android:src="@drawable/logo"
@@ -30,11 +35,11 @@
                 android:paddingTop="@dimen/vertical_padding_to_views"
                 android:clipToPadding="false"
                 android:id="@+id/rvFiles"
+                android:layout_below="@+id/image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_file" />
 
-        </LinearLayout>
-    </ScrollView>
+        </RelativeLayout>
 </layout>

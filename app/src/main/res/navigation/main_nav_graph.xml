@@ -16,5 +16,9 @@
         tools:layout="@layout/fragment_files"
         android:name="bee.bee.haiakarema.ui.main.fragments.FilesFragment"
         android:label="FilesFragment" />
+    <fragment
+        android:id="@+id/projectFragment"
+        android:name="bee.bee.haiakarema.ui.main.fragments.ProjectFragment"
+        android:label="ProjectFragment" />
 
 </navigation>

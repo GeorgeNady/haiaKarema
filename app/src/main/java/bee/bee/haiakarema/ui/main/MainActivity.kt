@@ -11,7 +11,7 @@ import bee.bee.haiakarema.R
 import bee.bee.haiakarema.base.BaseActivity
 import bee.bee.haiakarema.databinding.ActivityMainBinding
 import bee.bee.haiakarema.ui.auth.AuthActivity
-import bee.bee.hoshaapp.viewmodel.MainViewModel
+import bee.bee.haiakarema.viewmodel.MainViewModel
 
 class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
     ActivityMainBinding::inflate
