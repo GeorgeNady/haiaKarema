@@ -143,10 +143,9 @@ abstract class BaseFragment<T : ViewDataBinding?> : Fragment() {
         mAlertDialog!!.show()
     }
 
-    fun goToMainActivity(millis:Long) {
+    fun goToMainActivity() {
         val intent = Intent(authActivity, MainActivity::class.java)
         authActivity.apply {
-            Thread.sleep(millis)
             startActivity(intent)
             finish()
         }

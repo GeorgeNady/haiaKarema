@@ -25,11 +25,11 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
 
     override fun initialization() {
         mainActivity = this
-        /*if (token.isEmpty()) {
+        if (token.isEmpty()) {
             val intent = Intent(this, AuthActivity::class.java)
             startActivity(intent)
             finish()
-        }*/
+        }
     }
 
     override fun setListener() {
